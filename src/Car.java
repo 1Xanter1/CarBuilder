@@ -8,17 +8,6 @@ public class Car {
     private int seats;
     private boolean spoiler;
 
-    public Car(String model,String engine, String color, int year, String transmission, String wheelsSize, int seats, boolean spoiler) {
-        this.model = model;
-        this.engine = engine;
-        this.color = color;
-        this.year = year;
-        this.transmission = transmission;
-        this.wheelsSize = wheelsSize;
-        this.seats = seats;
-        this.spoiler = spoiler;
-    }
-
     @Override
     public String toString() {
         return "Car{" +
@@ -37,31 +26,63 @@ public class Car {
         return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     public String getEngine() {
         return engine;
+    }
+
+    public void setEngine(String engine) {
+        this.engine = engine;
     }
 
     public String getColor() {
         return color;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public int getYear() {
         return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 
     public String getTransmission() {
         return transmission;
     }
 
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
+    }
+
     public String getWheelsSize() {
         return wheelsSize;
+    }
+
+    public void setWheelsSize(String wheelsSize) {
+        this.wheelsSize = wheelsSize;
     }
 
     public int getSeats() {
         return seats;
     }
 
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
     public boolean isSpoiler() {
         return spoiler;
+    }
+
+    public void setSpoiler(boolean spoiler) {
+        this.spoiler = spoiler;
     }
 }
