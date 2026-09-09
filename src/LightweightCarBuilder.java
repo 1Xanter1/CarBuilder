@@ -46,9 +46,29 @@ public class LightweightCarBuilder implements CarBuilder {
         car.setSpoiler(spoiler);
         return this;
     }
-
+    /// Before:
+//    @Override
+//    public Car build() {
+//        return car;
+//    }
     @Override
     public Car build() {
+        if (car.getModel() == null || car.getModel().isBlank()) {
+            throw new IllegalStateException("Car model is required");
+        }
+
+        if (car.getEngine() == null || car.getEngine().isBlank()) {
+            throw new IllegalStateException("Car engine is required");
+        }
+
+        if (car.getYear() < 1886) {
+            throw new IllegalStateException("Invalid car year");
+        }
+
+        if (car.getSeats() <= 0) {
+            throw new IllegalStateException("Number of seats must be positive");
+        }
+
         return car;
     }
 }
